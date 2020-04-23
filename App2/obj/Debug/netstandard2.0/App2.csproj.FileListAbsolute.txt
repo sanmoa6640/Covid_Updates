@@ -1,0 +1,17 @@
+C:\Users\santi\source\repos\App2\App2\bin\Debug\netstandard2.0\App2.deps.json
+C:\Users\santi\source\repos\App2\App2\bin\Debug\netstandard2.0\App2.dll
+C:\Users\santi\source\repos\App2\App2\bin\Debug\netstandard2.0\ref\App2.dll
+C:\Users\santi\source\repos\App2\App2\bin\Debug\netstandard2.0\App2.pdb
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.csprojAssemblyReference.cache
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\Pages\AllCountriesPage.xaml.g.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\Pages\CountryDetailPage.xaml.g.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.AssemblyInfo.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.dll
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\ref\App2.dll
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.pdb
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\Pages\ChartPage.xaml.g.cs
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\App2\App2\obj\Debug\netstandard2.0\XamlC.stamp

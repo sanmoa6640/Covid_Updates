@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Pages.MainPage">
+
+    <StackLayout Margin="20" BackgroundColor="LavenderBlush" >
+        <!-- Place new controls here -->
+        <ProgressBar IsVisible="{Binding IsBusy}"/>
+        <StackLayout BackgroundColor="LightGreen" >
+            
+            <Label Text="Covid-19 Updates" 
+                   Margin="5,10"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   TextColor="White"
+                   FontSize="Title"/>
+            <StackLayout Orientation="Horizontal">
+            <Label  Text="Lats Updated on " 
+                        Margin="5,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        FontSize="Small"/>
+            <Label  Text="{Binding StatusData.Date.LocalDateTime,StringFormat='{}{0:dd/MM/yyyy a\\t h:mm tt}'} " 
+                        Margin="0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        FontSize="Small"/>
+            </StackLayout>
+        </StackLayout>
+        <ContentView  Margin="10">
+            
+            <ContentView.Content >
+
+                <StackLayout VerticalOptions="Center" Margin="0,200">
+                    <Label  Text="World Status" 
+                            FontSize="Title"
+                            HorizontalOptions="Center"
+                            TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Total Confirmed:" 
+                                FontSize="Body"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Start" />
+                        <Label Text="{Binding GlobalData.TotalConfirmed}" 
+                               FontSize="Subtitle"
+                               HorizontalOptions="Start" 
+                               VerticalOptions="Start" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label  Text="Total Recovered:" 
+                                FontSize="Body"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start" />
+                        <Label  Text="{Binding GlobalData.TotalRecovered}" 
+                                FontSize="Subtitle"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Total Deaths:" 
+                                FontSize="Body"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start" />
+
+                        <Label Text="{Binding GlobalData.TotalDeaths}" 
+                                FontSize="Subtitle"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start" />
+                    </StackLayout>
+                    <Button Text="visualize by countries"
+                            Margin="0,10"
+                            HorizontalOptions="CenterAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="200"
+                            Command="{Binding ListCountriescommand}"
+                            CornerRadius="10"/>
+                    <Button Text="Notices"
+                            Margin="0,10"
+                            HorizontalOptions="CenterAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="200"
+                            CornerRadius="10"/>
+                   
+                </StackLayout>
+            </ContentView.Content>
+        </ContentView>
+
+    </StackLayout>
+
+</ContentPage>

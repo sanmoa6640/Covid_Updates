@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Pages.AllCountriesPage">
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+
+            <StackLayout BackgroundColor="LightGreen" >
+
+                <Label Text="Covid-19 Updates" 
+                   Margin="5,10"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   TextColor="White"
+                   FontSize="Title"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label  Text="Lats Updated on " 
+                        Margin="5,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        FontSize="Small"/>
+                    <Label  Text="{Binding StatusData.Date.LocalDateTime,StringFormat='{}{0:dd/MM/yyyy a\\t h:mm tt}'} " 
+                        Margin="0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        FontSize="Small"/>
+                </StackLayout>
+            </StackLayout>
+            <ListView ItemsSource="{Binding CountryList}" SelectedItem="{Binding CountrySelected}">
+                <ListView.Header>
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Country" Grid.Column="0" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Start" Margin="5"/>
+                        <Label Text="Confirmed" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Margin="5"/>
+                        <Label Text="Recovered" Grid.Column="2" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Margin="5"/>
+                        <Label Text="Deaths" Grid.Column="3" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Margin="5"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding CountryCountry}" Grid.Column="0" TextColor="Black" FontSize="Body" BackgroundColor="AntiqueWhite" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="2"/>
+                                <Label Text="{Binding TotalConfirmed}" Grid.Column="1" TextColor="Purple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Body"/>
+                                <Label Text="{Binding TotalRecovered}" Grid.Column="2" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding TotalDeaths}" Grid.Column="3" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <SearchBar 
+                Text="{Binding Filter, Mode=TwoWay}"       
+                x:Name="searchBar"
+                Placeholder="" 
+                SearchCommand="{Binding SearchCountryCommand}" />
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

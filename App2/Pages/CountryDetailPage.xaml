@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Pages.CountryDetailPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="{Binding CountrySelected.CountryCountry}"
+                FontSize="Title"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Confirmed:" 
+                    FontSize="Subtitle"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start" />
+                <Label Text="{Binding CountrySelected.TotalConfirmed}" 
+                    FontSize="Subtitle"
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Recovered:" 
+                    FontSize="Subtitle"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start" />
+                <Label Text="{Binding CountrySelected.TotalRecovered}" 
+                    FontSize="Subtitle"
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Start" />
+            </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Deaths:" 
+                            FontSize="Subtitle"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start" />
+                        <Label Text="{Binding CountrySelected.TotalDeaths}" 
+                            FontSize="Subtitle"
+                            HorizontalOptions="Start" 
+                            VerticalOptions="Start" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+</ContentPage>
